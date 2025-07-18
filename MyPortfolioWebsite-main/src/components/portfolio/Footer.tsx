@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <footer className="bg-background border-t border-border/50">
       <div className="container mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <div className="text-2xl font-bold text-gradient-primary">
               &lt;Dev /&gt;
             </div>
@@ -19,9 +19,9 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <h4 className="font-semibold text-lg">Quick Links</h4>
-            <nav className="flex flex-col space-y-2">
+            <nav className="flex flex-col space-y-2 items-center md:items-start">
               {[{label: 'About', href: '#about'}, {label: 'Projects', href: '#projects'}, {label: 'Tech Stack', href: '#tech'}, {label: 'Experience', href: '#experience'}, {label: 'Contact', href: '#contact'}].map((link) => (
                 <a
                   key={link.label}
@@ -35,9 +35,9 @@ const Footer = () => {
           </div>
 
           {/* Resources */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <h4 className="font-semibold text-lg">Resources</h4>
-            <nav className="flex flex-col space-y-2">
+            <nav className="flex flex-col space-y-2 items-center md:items-start">
               {[
                 { name: 'GitHub', href: 'https://github.com' },
                 { name: 'LinkedIn', href: 'https://linkedin.com' },
@@ -61,15 +61,14 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-border/50 pt-8">
-          <div className="flex flex-col items-center gap-4">
-            <div className="flex items-center space-x-2 text-muted-foreground justify-center">
+          <div className="flex flex-col items-center gap-4 text-center">
+            <div className="flex flex-wrap items-center justify-center space-x-2 text-muted-foreground w-full">
               <span>© {currentYear} Made by Ibbad Arshad with</span>
               <Heart className="w-4 h-4 text-red-500 fill-current" />
               <span>and</span>
-              
               <Coffee className="w-4 h-4 text-amber-600" />
             </div>
-            <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center justify-center space-x-4 text-sm text-muted-foreground w-full">
               <span>Built with React + Tailwind CSS + GSAP</span>
             </div>
           </div>
